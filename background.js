@@ -15,11 +15,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         }
       });
     } else if (message.action === "tellJoke") {
-      const jokes = [
-        "Why don't scientists trust atoms? Because they make up everything!",
-        "Why did the scarecrow win an award? Because he was outstanding in his field!",
-        // Add more jokes here...
-      ];
       const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
       alert(randomJoke);
     } else if (message.action === "rickRoll") {
